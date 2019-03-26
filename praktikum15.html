@@ -1,0 +1,100 @@
+<html>
+    <head>
+        <title>Praktikum 5</title>
+
+        <script>
+            var mincar = 5;
+        
+            pola_username=/^[a-zA-z0-9\_\-]{8,100}$/;
+            pola_email=^[a-zA-z0-9._-]+@[a-zA-z0.-]+\.[a-zA-z]{2,4}$/;
+
+            function validasi_input(){
+                if(frregistrasi.txtiduser.value==""){
+                    alert("ID.User masih kosong!");
+                    frregistrasi.txtiduser.focus();
+                    return(false);
+                }
+                if(frregistrasi.txtiduser.value.lenght<mincar){
+                    alert("Panjang ID.user minimal 5 karakter!");
+                    frregistrasi.txtiduser/focus();
+                    return(false);
+                }
+                if!pola_username,test(frregistrasi.txtusername.value)){
+                    alert('Usernam minimal 8 karakter dan hanya boleh Huruf atau Angka');
+                    frregistrasi.txtusername.focus();
+                    return (false);
+                }
+                if(frregistrassi.txtpass.value==""){
+                    alert('password harus diisi');
+                    frregistrasi.txtpass.focus();
+                    return false;
+                }
+                if(!pola_email.test(frregistrasi.txtemail.value)){
+                    alert('Penulisan email tidak benar');
+                    frregistrasi.txtemail.focus();
+                    return false;
+                }
+                return (true);
+            }
+        </script>
+    </head>
+    <body>
+        <form name="frregistrasi"method="post"action=""target=""onsubmit="return validasi_input()">
+        <table align="center">
+            <tr>
+               <td>
+                   <fieldset>
+                   <legend>Form Registrasi</legend>
+                   <label for="txtiduser">ID. User</label><br>
+                   <input type="text" name="txtiduser" size="35" placeholder="ID. User"><br>
+                   <label for="txtusername">Username</label><br>
+                   <input type="text" name="txtusername" size="35" placeholder="Username"><br>
+                   <label for="txtpass">Password</label><br>
+                   <input type="password" name="txtpass" size="35" placeholder="Password"><br>
+                   <label for="txtemail">Email</label><br>
+                   <input type="email" name="txtemail" size="35" placeholder="Email"><br>
+                   <hr>
+                   <input type="submit" value="Login">&nbsp;<input type="reset" value="Batal">
+                    </fieldset>
+                   
+               </td> 
+            </tr>
+        </table>
+    </form>
+    </body>
+</html>
+
+<!--
+    baris 1 = tag pembuka html
+    baris 2 = tag pembuka head
+    baris 3 = membuat title/judul dihead dengan nama Praktikum 5 
+    baris 5 =tag pembuka script
+    baris 6 = membuat variabel mincar dengan nilai 5
+    baris 11 = membuat fungsi dengan nama validasi input
+    baris 38 = tag penutup function validasi_input
+    baris 39 = tag penutup script
+    baris 40 = tag penutup head
+    baris 41 = tag pembuka body
+    baris 42 = membuat form dengan nama frrgristrasi dengan method post dan onsubmit return validasi_input
+    baris 43 = membuat table dengan posisi tengah
+    baris 44 = tag pembuka tr
+    baris 45 = tag pembuka td 
+    baris 46 = tag pembuka fieldset
+    baris 47 = membuat legend dengan nama Form registrasi
+    baris 48 = membuat label untuk txtiduser dengan nama id.user
+    baris 49 = dengan input type text dan nama txtiduser dengan ukuran 35 dan memiliki placeholder id.user
+    baris 50 = membuat label untuk txtusername dengan nama username 
+    baris 51 = dengan input type text dan nama txtusername dengan ukuran 35 dan memiliki placeholder username
+    baris 52 = membuat label untuk txtpass dengan nama Password 
+    baris 53 = dengan input type password dan nama password dengan ukuran 35 dan memiliki placeholder password
+    baris 54 = membuat label untuk txtemail dengan nama email 
+    baris 55 = dengan input type email dan namma txtemail dengan ukuran 35 dan memiliki placeholder email
+    baris 56 = tag hr untuk membuat garis bawah
+    baris 57 = membuat input dengan type submit dengan nilai Login &nbsp(pengganti spasi) ,membuat input dengan type reset dengan nilai Batal
+    baris 58 = tag penutup fieldset 
+    baris 60 = tag penutup td
+    baris 61 = tag penutup tr
+    baris 62 = tag penutup table 
+    baris 63 = tag penutup form 
+    baris 64 = tag penutup body
+    baris 65 = tag penutup html!-->

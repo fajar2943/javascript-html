@@ -1,0 +1,112 @@
+<html>
+    <head>
+    <title>Praktikum 7</title>
+    </head>
+    <body>
+        <script language="Javascript">
+            var vnama, vtujuan, vjumlahtiket;
+            var vht = 0.0;
+            var vsub = 0.0;
+            var vtotal = 0.0;
+
+            function hitungtotal () {
+                vnama = (fform.inama.value) ;
+                vtujuan = (fform.itujuan.value) ;
+                vjumlahtiket = parseFloat(fform.ijumlah.value) ;
+                if (vtujuan=="Jakarta") {
+                    vht =100000;
+                }else if (vtujuan=="Cirebon"){
+                    vht =150000;
+                }else{
+                    vht =200000;
+                }
+                vsub = vjumlahtiket * vht;
+
+                if (ffrom.imember.checked==true) {
+                    vdiskon =0.10*vsub;
+                }else{
+                    vdiskon=0.0;
+                }
+                vtotal = vsub - vdiskon;
+                fform.otiket.value=eval (vht) ;
+                fform.osub.value=eval (vsub) ;
+                fform.odiskin.value=eval(vdiskon) ;
+                fform.ototal.value=eval (vtotal) ;
+            }
+        </script>
+        <form name ="fform">
+        <table border="1" align="center"width="40%">
+            <tr>
+                <td width="100%" colspan="2"><h2 align="center"></h2></td>
+            </tr>
+            <tr>
+                <td width="50%">
+
+                    Nama<br>
+                    <input type="text" name="inama" style="width:100%"><br>
+
+                    Tujuan<br>
+                    <select name="itujuan" style="width:100%"><br>
+                        <option value="">-- Pilih --</option>
+                        <option value="Jakarta">Jakarta</option>
+                        <option value="Cirebon">Cirebon</option>
+                        <option value="Tasikmalaya">Tasikmalaya</option>
+                    </select><br>
+
+
+                        Jumlah Tiket<br>
+                        <input type="text" name="ijumlah" style="width:100%"><br>
+
+                        Member<br>
+                        <input type="checkbox" name="imember">Ya
+                </td>
+
+                <td width="50%">
+
+                    Harga Tiket<br>
+                    <input type="text" name="otiket" style="width:100%"><br>
+
+                    Sub Total<br>
+                    <input type="text" name="osub" style="width:100%"><br>
+
+                    Diskon<br>
+                    <input type="text" name="odiskon" style="width:100%"><br>
+
+                    Total Bayar<br>
+                    <input type="text" name="ototal" style="width:100%"><br>
+                </td>
+            </tr>
+
+            <tr>
+                <td width="100%" colspan="2">
+                <center>
+                    <input type="button" value="Hitung" onclick="hitungtotal ()">
+                    <input type="reset" value="Ulang"> 
+                </center>    
+                </td>
+            </tr>
+        </table>    
+        </form>
+    </body>
+</html>
+
+<!--
+    baris 1 = tag pembuka html
+    baris 2 = tag pembuka head
+    baris 3 = membuat title/judul dihead dengan nama Praktikum 7
+    baris 4 = tag penutup head
+    baris 5 = tag pembuka body
+    baris 6 = tag pembuka script/javascript
+    baris 7 = mendefinisikan variabel dengan nama vnama, vtujuan, vjumlahtiket
+    baris 8 = variabel dengan nama vht bernilai 0.0
+    baris 9 = variabel dengan nama vsub bernilai 0.0
+    baris 10 = variabel dengan nama vdiskon bernilai 0.0 
+    baris 12 = membuat function dengan nama hitungtotal
+    baris 35 = tag penutup function
+    baris 36 = tag penutup script/javascript
+    baris 37 = mendefinisikan form dengan nama "ffrom"
+    baris 38 = tag pembuka table dengan border 1 dengan rata tengah dan lebar 40%
+    baris 88 = tag penutup table
+    baris 89 = tag penutup form
+    baris 90 = tag penutup body
+    baris 91 = tag penutup html
